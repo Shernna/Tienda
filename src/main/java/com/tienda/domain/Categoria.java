@@ -11,7 +11,7 @@ import lombok.Data;
 @Table (name="categoria")
 public class Categoria implements Serializable{
     
-    private static final long seralVersionUISD= 1L;
+    private static final long serialVersionUID= 1L;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
