@@ -42,7 +42,7 @@ public class PruebasController {
     }
     
      //Los métodos siguientes son para la prueba de consultas ampliadas
-    @GetMapping("/consulta")
+    @GetMapping("/consultas")
     public String listado2(Model model) {
         var productos = productoService.getProductos(false);
         model.addAttribute("productos", productos);

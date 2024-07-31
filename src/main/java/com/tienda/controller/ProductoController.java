@@ -25,7 +25,7 @@ public class ProductoController {
     private ProductoService productoService;
     
     @Autowired
-    private CategoriaService categoriaService;
+    private CategoriaService CategoriaService;
     
     @Autowired
     private FirebaseStorageServiceImpl firebaseStorageService;
@@ -35,7 +35,8 @@ public class ProductoController {
         var productos = productoService.getProductos(false);
         model.addAttribute("productos", productos);
         model.addAttribute("totalProductos", productos.size());
-        List<Categoria> categorias = categoriaService.getCategorias(true);
+        
+        List<Categoria> categorias = CategoriaService.getCategorias(true);
         model.addAttribute("categorias", categorias);
         
         return "/producto/listado";
@@ -76,8 +77,8 @@ public class ProductoController {
         producto = productoService.getProducto(producto);
         model.addAttribute("producto", producto);
         
-        List<Categoria> categorias = categoriaService.getCategorias(true);
-        model.addAttribute("categorias", categorias);
+        List<Producto> productos = productoService.getProductos(true);
+        model.addAttribute("productos", productos);
         
         return "/producto/modifica";
     }

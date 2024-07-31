@@ -21,6 +21,7 @@ public class Producto implements Serializable {
     private int existencias;
     private String rutaImagen;
     private boolean activo;
+    
 
     @ManyToOne
     @JoinColumn (name = "id_categoria") //insertable = false, updatable = false
@@ -28,7 +29,6 @@ public class Producto implements Serializable {
 
     public Producto() {        
     }
-
 
     public Producto(String descripcion, String detalle, double precio, int existencias, String imagen, boolean activo) {
         this.descripcion = descripcion;
