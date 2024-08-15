@@ -1,18 +1,3 @@
-#Definiendo información para utilizar cuenta de Correo para usuarios
-spring.mail.host=smtp.gmail.com
-spring.mail.port=587
-spring.mail.username=ElCorreoDefinido@gmail.com
-spring.mail.password=LaClave de 16 dígitos de gmail... la de fondo amarillo
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.smtp.starttls.enable=true
-
-#nombre del servidor para enviar el correo
-servidor.http=localhost
-
-
-Recorte013 RegistroService.java
-==========
-
 package com.tienda.service;
 
 import com.tienda.domain.Usuario;
